@@ -1,0 +1,15 @@
+function http_add($url){
+	$url = trim($url);
+	$parse_url = parse_url($url, PHP_URL_SCHEME);
+	
+	$http = "";
+	if(empty($parse_url)){
+		$http .="http://";
+	} else {
+		$http .="";
+	}
+	
+	$newUrl = $http.$url;
+	
+	return $newUrl;
+}
